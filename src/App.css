@@ -1,38 +1,266 @@
-.App {
-  text-align: center;
+
+/*GENERAL..................................................................................................................................*/
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.95rem;
+    background: #ffffff;
+    min-height: 100vh;
+    font-family: Arial, serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1{
+    margin-top:15px  ;
+    color: steelblue;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p{
+    margin-top:10px  ;
 }
 
-.App-link {
-  color: #61dafb;
+hr{
+    margin: 15px;
+    border: 1px solid steelblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h3{
+    color: steelblue;
 }
+
+/*select{
+   border: 2px solid steelblue;
+   color: steelblue;
+}*/
+
+button:hover{
+    color: yellow;
+}
+
+ul{
+    list-style-type: none ;
+}
+
+
+/*COMPONENTS...................................................................................................................................*/
+
+/*Posts...........................................................................................................*/
+.posts{
+
+    width: 80%;
+}
+
+.posts h1{
+
+    font-family:'Time New Roman', serif;
+
+}
+
+.post {
+
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 2px solid steelblue;
+    margin-top: 15px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.post__id__page{
+
+        /*height: 100vh;*/
+
+}
+
+.post-btn {
+
+  margin-right: 0.5rem;
+}
+
+.post-enter {
+
+  transform: translateX(350px);
+}
+
+.post-enter-active {
+
+  transform: translateX(0px);
+  transition: all 500ms ease-in;
+}
+
+.post-exit {
+
+  opacity: 1;
+}
+
+.post-exit-active {
+
+  transform: translateX(-350px);
+  transition: all 500ms ease-in;
+}
+
+
+/*Post....................................................................................................*/
+.post-item{
+
+    display: flex;
+    flex-direction: row;
+}
+.post__btns{
+
+   display: flex;
+   flex-direction: column;
+   align-self: auto
+}
+
+
+.post__btns button{
+
+    margin-bottom: 10px;
+}
+
+
+/*navbar...................................................................................................*/
+.navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    background:steelblue ;
+    margin-bottom: 50px;
+}
+
+.navbar__row{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .logo{
+
+    font-family:'Time New Roman', serif;
+    font-size: 2.0rem;
+    color: lightblue;
+}
+
+
+.navbar__links {
+
+    display: flex;
+    flex-direction: column;
+
+  justify-content: space-between;
+/*    width: 25%;*/
+    align-items: center;
+    overflow: visible;
+        font-family:'Time New Roman', serif;
+
+
+}
+
+.navbar__links div{
+
+/*    margin-left: 10%;*/
+/*    overflow: visible;*/
+}
+
+
+/*link...................................................................................................*/
+.link{
+    color: white;
+    color: lightblue;
+    font-size:1.5rem ;
+    text-decoration: none;
+ }
+
+.link:hover{
+    color: yellow;
+}
+
+/*page.....................................................................................................*/
+.page__wrapper {
+    margin-top: 30px;
+    display: flex;
+}
+
+.page__current {
+    border: 2px solid orange;
+    font-weight: bold;
+}
+
+.page__wrapper{
+    margin-bottom: 50px;
+    display: flex;
+      flex-wrap: wrap;
+
+}
+
+.page {
+    border: 2px solid steelblue;
+    margin: 5px;
+      padding: 10px;
+    /*border: 1px solid teal;*/
+    cursor: pointer;
+    color: steelblue;
+
+}
+
+.page:hover{
+    border:2px solid yellow ;
+    background:yellow ;
+    color: white;
+}
+
+.page__current{
+    border:2px solid yellow ;
+    background:yellow ;
+    color: steelblue;
+}
+
+
+/*page-about.....................................................................................................*/
+.UsersList, .UserPosts 
+{
+    color: steelblue;
+    font-weight: bold;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 3.3rem;
+}
+
+.UsersList .user 
+{
+   display: flex;
+  justify-content: space-between;
+}
+
+.UsersList .user .buttons button,
+.UsersList .user .buttons button .link
+{
+    padding:2px;  
+    color: white;
+    color: lightblue;
+    font-size:0.8rem ;
+    text-decoration: none;
+}
+
+.post__id__page{
+    width: 80%;
+}
+
+
