@@ -4,6 +4,7 @@ import './App.css';
 // import {useDispatch,useSelector} from "react-redux";
 import {
     BrowserRouter, 
+    HashRouter
     // Route,
     // Routes,
     // Link
@@ -16,10 +17,12 @@ function App() {
 
     return (
         <div className="App">
-            <BrowserRouter>
+            <HashRouter>
+
                 <Navbar />
                 <AppRouter />
-            </BrowserRouter>
+            </HashRouter>
+
         </div>
     );
 }
